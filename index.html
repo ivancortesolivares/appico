@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SII - Servicio de Impuestos Internos</title>
+
+    <script>
+    const password = prompt("Ingrese la contraseña:");
+
+    if (password !== "secretos") {
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.innerHTML = "<h1>Contraseña incorrecta</h1>";
+        });
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-color: #FEF9E7; /* Amarillo pálido */
+            --bg-color: #FEF9E7;
             --text-color: #000000;
             --blue-color: #0056b3;
             --font-family: 'Inter', sans-serif;
@@ -51,19 +63,6 @@
             background-color: white;
             border: 2px solid var(--blue-color);
             border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .sii-button:hover {
-            background-color: var(--blue-color);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 86, 179, 0.2);
-        }
-
-        .sii-button:active {
-            transform: translateY(1px);
         }
     </style>
 </head>
@@ -72,8 +71,9 @@
     <h1>SERVICIO DE IMPUESTOS INTERNOS</h1>
 
     <div class="btn-container">
-        <a href="https://homer.sii.cl/" class="sii-button" id="sii-redirect-btn">SII</a>
+        <a href="https://homer.sii.cl/" class="sii-button">SII</a>
     </div>
 
 </body>
 </html>
+
